@@ -1,0 +1,7 @@
+name,email,budget,interest
+Alex Morgan,alex@example.com,3500,Automate lead intake
+Taylor Reed,taylor@example.com,800,Connect two applications
+Alex Duplicate,ALEX@example.com,3500,Repeated submission
+Incomplete,invalid-address,100,Missing valid email
+Jordan Lane,jordan@example.com,2100,Support routing
+Sam Example,sam@example.com,not-a-number,Invalid budget
