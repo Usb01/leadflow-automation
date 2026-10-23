@@ -1,0 +1,17 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - run: python -m leadflow run --website_form data/website_form.csv --meta_lead_ads data/meta_lead_ads.csv --event_signups data/event_signups.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leadflow-report
+          path: runs/
