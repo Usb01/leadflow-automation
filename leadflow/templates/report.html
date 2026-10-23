@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeadFlow run – {{ generated }}</title>
+<style>
+  body { margin: 0; font: 14px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; color: #1f2430; background: #f7f7f9; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 48px; }
+  h1 { font-size: 20px; margin: 0; } h2 { font-size: 15px; margin: 28px 0 10px; }
+  .sub { color: #6b7180; margin: 4px 0 22px; }
+  .funnel { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .step { background: #fff; border: 1px solid #e5e6ea; border-radius: 10px; padding: 14px; }
+  .step span { color: #6b7180; font-size: 12px; } .step b { display: block; font-size: 24px; }
+  .grades { display: flex; gap: 10px; margin-top: 12px; }
+  .g { flex: var(--n); min-width: 70px; border-radius: 8px; padding: 10px 12px; color: #fff; font-weight: 600; }
+  .gA { background: #15803d; } .gB { background: #ca8a04; } .gC { background: #9ca3af; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5e6ea; border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eef0f3; vertical-align: top; font-size: 13px; }
+  th { background: #fafafb; color: #6b7180; font-weight: 500; font-size: 12px; }
+  .badge { display: inline-block; min-width: 22px; text-align: center; border-radius: 5px; color: #fff; font-weight: 700; font-size: 12px; padding: 1px 6px; }
+  .why { color: #6b7180; font-size: 12px; }
+  .known { color: #6b7180; font-size: 11px; border: 1px solid #d1d5db; border-radius: 4px; padding: 0 5px; }
+  code { background: #eef0f3; padding: 1px 4px; border-radius: 4px; font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>LeadFlow run</h1>
+  <p class="sub">{{ generated }} · sources: {% for s, n in r.per_source.items() %}<code>{{ s }}</code> ({{ n }}){% if not loop.last %}, {% endif %}{% endfor %}
+    · CRM: {{ sink.mode }}{% if sink.contacts is defined %} ({{ sink.contacts }} contacts){% endif %}</p>
+
+  <section class="funnel">
+    <div class="step"><span>Rows received</span><b>{{ total_in }}</b></div>
+    <div class="step"><span>Rejected</span><b>{{ r.rejected | length }}</b></div>
+    <div class="step"><span>Duplicates merged</span><b>{{ r.merges | length }}</b></div>
+    <div class="step"><span>Unique people</span><b>{{ r.leads | length }}</b></div>
+    <div class="step"><span>New this run</span><b>{{ new | length }}</b></div>
+  </section>
+  <div class="grades">
+    {% for g, n in grade_counts.items() if n %}<div class="g g{{ g }}" style="--n: {{ n }}">{{ g }} · {{ n }}</div>{% endfor %}
+  </div>
+
+  <h2>Leads by score</h2>
+  <table>
+    <tr><th></th><th>Score</th><th>Name</th><th>Company</th><th>Contact</th><th>Route</th><th>Why</th></tr>
+    {% for l in r.leads %}
+    <tr>
+      <td><span class="badge g{{ l.grade }}">{{ l.grade }}</span></td>
+      <td><b>{{ l.score }}</b></td>
+      <td>{{ l.name }}{% if l in known %} <span class="known">already in CRM</span>{% endif %}<br>
+        <span class="why">{{ l.job_title or "" }}</span></td>
+      <td>{{ l.company or "–" }}<br><span class="why">{{ l.country or "" }}</span></td>
+      <td>{{ l.email or "" }}<br><span class="why">{{ l.phone or "" }}</span></td>
+      <td>{{ l.route | replace("_", " ") }}</td>
+      <td class="why">{{ l.reasons | join(", ") }}{% if l.merged_from %}<br>merged: {{ l.merged_from | join(", ") }}{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% if r.merges %}
+  <h2>Duplicates merged</h2>
+  <table>
+    <tr><th>Kept</th><th>Merged in</th><th>Matched on</th></tr>
+    {% for kept, dropped, rule in r.merges %}<tr><td><code>{{ kept }}</code></td><td><code>{{ dropped }}</code></td><td>{{ rule }}</td></tr>{% endfor %}
+  </table>
+  {% endif %}
+
+  {% if r.rejected %}
+  <h2>Rejected rows</h2>
+  <table>
+    <tr><th>Row</th><th>Reason</th></tr>
+    {% for ref, reason, raw in r.rejected %}<tr><td><code>{{ ref }}</code></td><td>{{ reason }}</td></tr>{% endfor %}
+  </table>
+  {% endif %}
+</main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "budget_bands": [
+    {"min": 50000, "points": 35},
+    {"min": 20000, "points": 25},
+    {"min": 5000, "points": 12},
+    {"min": 0, "points": 0}
+  ],
+  "missing_budget": 0,
+  "timeline": [
+    {"pattern": "asap|immediately|this month|urgent|now", "points": 20},
+    {"pattern": "1-3 months|next month|this quarter|q[1-4]", "points": 12},
+    {"pattern": "3-6|later|next year|just looking|exploring", "points": 2}
+  ],
+  "business_email": 15,
+  "titles": [
+    {"pattern": "ceo|founder|owner|managing director|gm|general manager|director|head of|vp|c[otfm]o", "points": 15},
+    {"pattern": "manager|lead", "points": 8},
+    {"pattern": "student|intern", "points": -10}
+  ],
+  "target_countries": ["SA", "AE", "QA", "KW", "BH", "OM"],
+  "target_country_points": 8,
+  "has_phone": 5,
+  "repeat_interest": 7,
+  "disposable_email": -30,
+  "grades": [
+    {"grade": "A", "min": 65},
+    {"grade": "B", "min": 35},
+    {"grade": "C", "min": 0}
+  ],
+  "routes": {"A": "sales_call", "B": "nurture_sequence", "C": "newsletter_only"}
+}

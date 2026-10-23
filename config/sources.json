@@ -1,0 +1,17 @@
+{
+  "_comment": "Map each source's column headers onto LeadFlow fields. Unmapped columns are ignored.",
+  "website_form": {
+    "Full Name": "name", "Work Email": "email", "Phone": "phone", "Company": "company", "Job Title": "job_title",
+    "Country": "country", "Budget (SAR)": "budget", "When do you want to start?": "timeline",
+    "How can we help?": "message", "Submitted": "submitted_at"
+  },
+  "meta_lead_ads": {
+    "full_name": "name", "email": "email", "phone_number": "phone", "company_name": "company",
+    "job_title": "job_title", "country": "country", "what_is_your_budget?": "budget",
+    "created_time": "submitted_at"
+  },
+  "event_signups": {
+    "Name": "name", "E-mail": "email", "Mobile": "phone", "Organisation": "company", "Position": "job_title",
+    "Notes": "message"
+  }
+}

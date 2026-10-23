@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeadFlow run – 23 Oct 2026 05:33</title>
+<style>
+  body { margin: 0; font: 14px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; color: #1f2430; background: #f7f7f9; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 48px; }
+  h1 { font-size: 20px; margin: 0; } h2 { font-size: 15px; margin: 28px 0 10px; }
+  .sub { color: #6b7180; margin: 4px 0 22px; }
+  .funnel { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .step { background: #fff; border: 1px solid #e5e6ea; border-radius: 10px; padding: 14px; }
+  .step span { color: #6b7180; font-size: 12px; } .step b { display: block; font-size: 24px; }
+  .grades { display: flex; gap: 10px; margin-top: 12px; }
+  .g { flex: var(--n); min-width: 70px; border-radius: 8px; padding: 10px 12px; color: #fff; font-weight: 600; }
+  .gA { background: #15803d; } .gB { background: #ca8a04; } .gC { background: #9ca3af; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5e6ea; border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eef0f3; vertical-align: top; font-size: 13px; }
+  th { background: #fafafb; color: #6b7180; font-weight: 500; font-size: 12px; }
+  .badge { display: inline-block; min-width: 22px; text-align: center; border-radius: 5px; color: #fff; font-weight: 700; font-size: 12px; padding: 1px 6px; }
+  .why { color: #6b7180; font-size: 12px; }
+  .known { color: #6b7180; font-size: 11px; border: 1px solid #d1d5db; border-radius: 4px; padding: 0 5px; }
+  code { background: #eef0f3; padding: 1px 4px; border-radius: 4px; font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>LeadFlow run</h1>
+  <p class="sub">23 Oct 2026 05:33 · sources: <code>website_form</code> (12), <code>meta_lead_ads</code> (7), <code>event_signups</code> (5)
+    · CRM: dry_run (16 contacts)</p>
+
+  <section class="funnel">
+    <div class="step"><span>Rows received</span><b>24</b></div>
+    <div class="step"><span>Rejected</span><b>2</b></div>
+    <div class="step"><span>Duplicates merged</span><b>4</b></div>
+    <div class="step"><span>Unique people</span><b>18</b></div>
+    <div class="step"><span>New this run</span><b>18</b></div>
+  </section>
+  <div class="grades">
+    <div class="g gA" style="--n: 7">A · 7</div><div class="g gB" style="--n: 6">B · 6</div><div class="g gC" style="--n: 5">C · 5</div>
+  </div>
+
+  <h2>Leads by score</h2>
+  <table>
+    <tr><th></th><th>Score</th><th>Name</th><th>Company</th><th>Contact</th><th>Route</th><th>Why</th></tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>100</b></td>
+      <td>Faisal Al-Harbi<br>
+        <span class="why">Operations Director</span></td>
+      <td>Najd Logistics<br><span class="why">SA</span></td>
+      <td>faisal@najdlogistics.com.sa<br><span class="why">+966551234567</span></td>
+      <td>sales call</td>
+      <td class="why">+35 budget ≥ 50,000, +20 timeline &#39;ASAP&#39;, +15 business email, +15 title &#39;Operations Director&#39;, +8 target market SA, +5 phone number, +7 contacted us more than once<br>merged: meta_lead_ads:2</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>100</b></td>
+      <td>Noura Al-Dossari<br>
+        <span class="why">CEO</span></td>
+      <td>Sahaba Fintech<br><span class="why">SA</span></td>
+      <td>noura@sahabafintech.sa<br><span class="why">+966559876543</span></td>
+      <td>sales call</td>
+      <td class="why">+35 budget ≥ 50,000, +20 timeline &#39;immediately&#39;, +15 business email, +15 title &#39;CEO&#39;, +8 target market SA, +5 phone number, +7 contacted us more than once<br>merged: event_signups:2</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>82</b></td>
+      <td>John Peters<br>
+        <span class="why">Head of E-commerce</span></td>
+      <td>Northwind Retail<br><span class="why">GB</span></td>
+      <td>john.peters@northwind-retail.co.uk<br><span class="why">+447700900123</span></td>
+      <td>sales call</td>
+      <td class="why">+35 budget ≥ 50,000, +12 timeline &#39;next month&#39;, +15 business email, +15 title &#39;Head of E-commerce&#39;, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>80</b></td>
+      <td>Omar Siddiqui<br>
+        <span class="why">Owner</span></td>
+      <td>Bright Dental Clinic<br><span class="why">AE</span></td>
+      <td>omar@brightdental.ae<br><span class="why">+971507654321</span></td>
+      <td>sales call</td>
+      <td class="why">+25 budget ≥ 20,000, +12 timeline &#39;1-3 months&#39;, +15 business email, +15 title &#39;Owner&#39;, +8 target market AE, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>80</b></td>
+      <td>Mohammed Ali<br>
+        <span class="why">Marketing Manager</span></td>
+      <td>Riyadh Motors<br><span class="why">SA</span></td>
+      <td>m.ali@riyadhmotors.sa<br><span class="why">+966533334444</span></td>
+      <td>sales call</td>
+      <td class="why">+25 budget ≥ 20,000, +12 timeline &#39;1-3 months&#39;, +15 business email, +8 title &#39;Marketing Manager&#39;, +8 target market SA, +5 phone number, +7 contacted us more than once<br>merged: meta_lead_ads:4</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>78</b></td>
+      <td>Tariq Hussain<br>
+        <span class="why">General Manager</span></td>
+      <td>Al Khobar Clinics<br><span class="why">SA</span></td>
+      <td>tariq@alkhobarclinics.com<br><span class="why">+966560001122</span></td>
+      <td>sales call</td>
+      <td class="why">+35 budget ≥ 50,000, +15 business email, +15 title &#39;General Manager&#39;, +8 target market SA, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gA">A</span></td>
+      <td><b>73</b></td>
+      <td>Khalid Bin Saad<br>
+        <span class="why">Procurement Manager</span></td>
+      <td>Gulf Build Contracting<br><span class="why">SA</span></td>
+      <td>khalid@gulfbuild.com<br><span class="why">+966542223344</span></td>
+      <td>sales call</td>
+      <td class="why">+25 budget ≥ 20,000, +12 timeline &#39;this quarter&#39;, +15 business email, +8 title &#39;Procurement Manager&#39;, +8 target market SA, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gB">B</span></td>
+      <td><b>62</b></td>
+      <td>Priya Raman<br>
+        <span class="why">VP Operations</span></td>
+      <td>CloudNest<br><span class="why">IN</span></td>
+      <td>priya@cloudnest.io<br><span class="why">+919876543210</span></td>
+      <td>nurture sequence</td>
+      <td class="why">+25 budget ≥ 20,000, +2 timeline &#39;next year&#39;, +15 business email, +15 title &#39;VP Operations&#39;, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gB">B</span></td>
+      <td><b>61</b></td>
+      <td>Yousef Al-Qahtani<br>
+        <span class="why">Sales Lead</span></td>
+      <td>Eastpoint Real Estate<br><span class="why">SA</span></td>
+      <td>yousef@eastpointre.com<br><span class="why">+966504445566</span></td>
+      <td>nurture sequence</td>
+      <td class="why">+25 budget ≥ 20,000, +15 business email, +8 title &#39;Sales Lead&#39;, +8 target market SA, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gB">B</span></td>
+      <td><b>60</b></td>
+      <td>Bilal Ahmed<br>
+        <span class="why">Owner</span></td>
+      <td>Ahmed Trading<br><span class="why">SA</span></td>
+      <td><br><span class="why">+966566667777</span></td>
+      <td>nurture sequence</td>
+      <td class="why">+12 budget ≥ 5,000, +20 timeline &#39;this month&#39;, +15 title &#39;Owner&#39;, +8 target market SA, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gB">B</span></td>
+      <td><b>44</b></td>
+      <td>Ayesha Khan<br>
+        <span class="why">Owner</span></td>
+      <td>Khan Textiles<br><span class="why">PK</span></td>
+      <td>ayesha.khan@hotmail.com<br><span class="why">+923001234567</span></td>
+      <td>nurture sequence</td>
+      <td class="why">+12 budget ≥ 5,000, +12 timeline &#39;1-3 months&#39;, +15 title &#39;Owner&#39;, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gB">B</span></td>
+      <td><b>40</b></td>
+      <td>Dana Saleh<br>
+        <span class="why">Founder</span></td>
+      <td>Saleh Events<br><span class="why">BH</span></td>
+      <td><br><span class="why">+97333445566</span></td>
+      <td>nurture sequence</td>
+      <td class="why">+12 budget ≥ 5,000, +15 title &#39;Founder&#39;, +8 target market BH, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gB">B</span></td>
+      <td><b>36</b></td>
+      <td>Ahmed Zahrani<br>
+        <span class="why">IT Manager</span></td>
+      <td>Saudi Ports Services<br><span class="why">SA</span></td>
+      <td>ahmed.z@saudiports.sa<br><span class="why">+966541239876</span></td>
+      <td>nurture sequence</td>
+      <td class="why">+15 business email, +8 title &#39;IT Manager&#39;, +8 target market SA, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gC">C</span></td>
+      <td><b>34</b></td>
+      <td>Sara Malik<br>
+        <span class="why">Freelance designer</span></td>
+      <td>–<br><span class="why">SA</span></td>
+      <td>sara.malik@gmail.com<br><span class="why">+966501234567</span></td>
+      <td>newsletter only</td>
+      <td class="why">+12 budget ≥ 5,000, +2 timeline &#39;Just exploring&#39;, +8 target market SA, +5 phone number, +7 contacted us more than once<br>merged: event_signups:4</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gC">C</span></td>
+      <td><b>28</b></td>
+      <td>Hassan Raza<br>
+        <span class="why">Export Manager</span></td>
+      <td>Lahore Garments<br><span class="why">PK</span></td>
+      <td>hassan.raza@lahoregarments.pk<br><span class="why">+923217654321</span></td>
+      <td>newsletter only</td>
+      <td class="why">+15 business email, +8 title &#39;Export Manager&#39;, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gC">C</span></td>
+      <td><b>17</b></td>
+      <td>Lina Haddad<br>
+        <span class="why">Marketing</span></td>
+      <td>–<br><span class="why">JO</span></td>
+      <td>lina.haddad@outlook.com<br><span class="why">+962791234567</span></td>
+      <td>newsletter only</td>
+      <td class="why">+12 budget ≥ 5,000, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gC">C</span></td>
+      <td><b>13</b></td>
+      <td>Reem Al-Otaibi<br>
+        <span class="why"></span></td>
+      <td>–<br><span class="why">SA</span></td>
+      <td>reem.otaibi@yahoo.com<br><span class="why">+966501112233</span></td>
+      <td>newsletter only</td>
+      <td class="why">+8 target market SA, +5 phone number</td>
+    </tr>
+    
+    <tr>
+      <td><span class="badge gC">C</span></td>
+      <td><b>0</b></td>
+      <td>Hana Yousef<br>
+        <span class="why">Student</span></td>
+      <td>–<br><span class="why">EG</span></td>
+      <td>hana.yousef@mailinator.com<br><span class="why"></span></td>
+      <td>newsletter only</td>
+      <td class="why">+2 timeline &#39;later&#39;, -10 title &#39;Student&#39;, -30 disposable email</td>
+    </tr>
+    
+  </table>
+
+  
+  <h2>Duplicates merged</h2>
+  <table>
+    <tr><th>Kept</th><th>Merged in</th><th>Matched on</th></tr>
+    <tr><td><code>website_form:2</code></td><td><code>meta_lead_ads:2</code></td><td>email</td></tr><tr><td><code>website_form:11</code></td><td><code>meta_lead_ads:4</code></td><td>phone</td></tr><tr><td><code>website_form:9</code></td><td><code>event_signups:2</code></td><td>email</td></tr><tr><td><code>website_form:3</code></td><td><code>event_signups:4</code></td><td>email</td></tr>
+  </table>
+  
+
+  
+  <h2>Rejected rows</h2>
+  <table>
+    <tr><th>Row</th><th>Reason</th></tr>
+    <tr><td><code>website_form:10</code></td><td>invalid email &#39;test@test&#39;</td></tr><tr><td><code>event_signups:5</code></td><td>invalid email &#39;grace@&#39;</td></tr>
+  </table>
+  
+</main>
+</body>
+</html>
